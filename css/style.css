@@ -9,22 +9,15 @@ body {
     position: relative;
 }
 
-body::before {
-    content: "";
-    background: url('/images/ganh_nang_tai_chinh.jpg') no-repeat center center;
-    background-size: cover; /* Điều chỉnh kích thước nền */
-    opacity: 0.5; /* Điều chỉnh độ mờ ở đây */
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1; /* Đảm bảo nó nằm phía sau nội dung */
-}
 
-header, main, footer {
-    position: relative; /* Đảm bảo các phần tử chính nằm phía trên nền */
-    z-index: 1; /* Đảm bảo chúng nằm phía trên pseudo-element */
+
+header,
+main,
+footer {
+    position: relative;
+    /* Đảm bảo các phần tử chính nằm phía trên nền */
+    z-index: 1;
+    /* Đảm bảo chúng nằm phía trên pseudo-element */
 }
 
 header {
@@ -48,8 +41,8 @@ main {
 footer {
     background-color: rgb(19, 28, 48);
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    text-align: center;
     padding: 1rem;
     color: white !important;
 }
@@ -58,126 +51,87 @@ footer a {
     color: white;
     text-decoration: none;
 }
+section {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
 
 #textEffect {
     text-shadow: #FFFFFF 0 0 12px, #a9e942 0 0 25px, #a9e942 0 0 35px, #a9e942 0 0 50px;
     font-weight: bold;
 }
 
-/* Thu nhỏ khoảng cách giữa các column */
-#colF {
-    background-color: white;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 10%;
+
+
+#layOut>div {
+    border: 1px solid black;
+    padding: 10px;
+    width: fit-content;
+    /* Adjust as needed */
+    text-align: center;
+    height: fit-content;
 }
 
-#list a {
+#layOut ul li {
+    list-style-type: none;
+    padding: 5px;
+    text-align: left;
+}
+
+#layOut ul li a {
     text-decoration: none;
     color: black;
+
 }
 
-#list a:hover {
-    background-color: #13d7f1;
-}
 
-#list li {
-    list-style: none;
-}
 
-#danhMuc {
-    border-bottom: 1px solid black;
-}
+#menuDetail {
 
-#allList {
-    padding-left: 0;
-}
-
-#allList input {
+    margin-left: 2rem;
+    margin-right: 2rem;
     width: 100%;
-}
 
-#listDetail {
-    background-color: white;
-    padding: 1rem;
-}
 
-#listF {
-    padding: 1rem;
 }
+  
 
-#pF {
+
+#list{
+    text-align: left;
     padding: 1rem;
-    background-color: #a9e942;
+
+
+}
+#list img{
+
+    width: fit-content;
+    height: 100px;
     border-radius: 10%;
+    image-rendering: crisp-edges;
+    
 }
 
-#listDetail img {
+#list form{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    
+}
+
+.search-container form {
     width: 100%;
-    max-width: 100px;
-    border-radius: 20%;
-}
-
-.btn-primary {
-    background-color: #a9e942;
-    color: black;
-    border: #a9e942;
-}
-
-section {
-    padding: 0;
-    width: 100%;
-}
-
-form {
-    padding: 1rem;
-}
-
-#orderFM {
-    margin: 10px;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    border: 1px solid black;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header, footer, main {
-        padding: 0 1rem;
-    }
-
-    header img {
-        width: 100%;
-        height: auto;
-    }
-
-    #colF, #allList, #listDetail, #orderFM {
-        width: 100%;
-        margin: 0;
-    }
-
-    #listF {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .row.container {
-        flex-direction: column;
-    }
-
-    #textEffect h1 {
-        font-size: 1.5rem;
-    }
-
-    #allList {
-        padding: 0;
-    }
-
-    #listDetail {
-        margin: 0;
-    }
-
-    section {
-        margin-left: 0;
-    }
+    max-width: fit-content; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    
 }
