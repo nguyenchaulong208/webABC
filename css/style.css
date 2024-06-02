@@ -135,3 +135,6 @@ align-items: center;
     justify-content: center;
     
 }
+#orderList{
+    padding: 1rem;
+}
