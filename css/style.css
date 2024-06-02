@@ -7,6 +7,7 @@ body {
     height: 100%;
     width: 100%;
     position: relative;
+    background-color: gray;
 }
 
 
@@ -95,6 +96,7 @@ section {
     margin-left: 2rem;
     margin-right: 2rem;
     width: 100%;
+    background-color: white;
 
 
 }
@@ -136,5 +138,14 @@ align-items: center;
     
 }
 #orderList{
+    padding: 1rem;
+}
+
+#menu{
+    background-color: white;
+}
+
+#cart{
+    background-color: white;
     padding: 1rem;
 }
