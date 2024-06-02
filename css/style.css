@@ -3,10 +3,10 @@ body {
     font-family: 'Courier New', Courier, monospace;
     color: black;
     padding: 0;
+    margin: 0;
     height: 100%;
     width: 100%;
     position: relative;
-    margin: 0;
 }
 
 body::before {
@@ -34,8 +34,9 @@ header {
 }
 
 header img {
-    width: 300px;
-    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     border-radius: 10%;
     image-rendering: crisp-edges;
 }
@@ -47,8 +48,9 @@ main {
 footer {
     background-color: rgb(19, 28, 48);
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 0;
+    padding: 1rem;
     color: white !important;
 }
 
@@ -65,9 +67,8 @@ footer a {
 /* Thu nhỏ khoảng cách giữa các column */
 #colF {
     background-color: white;
-    width: fit-content;
-    height: fit-content;
-    top: 20px;
+    padding: 1rem;
+    margin-bottom: 1rem;
     border-radius: 10%;
 }
 
@@ -82,7 +83,6 @@ footer a {
 
 #list li {
     list-style: none;
-    margin-left: -30px;
 }
 
 #danhMuc {
@@ -90,7 +90,7 @@ footer a {
 }
 
 #allList {
-    padding-left: 2rem;
+    padding-left: 0;
 }
 
 #allList input {
@@ -99,8 +99,7 @@ footer a {
 
 #listDetail {
     background-color: white;
-    margin-left: 2px;
-    margin-right: 2px;
+    padding: 1rem;
 }
 
 #listF {
@@ -114,8 +113,8 @@ footer a {
 }
 
 #listDetail img {
+    width: 100%;
     max-width: 100px;
-    max-height: 100px;
     border-radius: 20%;
 }
 
@@ -127,8 +126,7 @@ footer a {
 
 section {
     padding: 0;
-    margin-left: 20%;
-    width: auto;
+    width: 100%;
 }
 
 form {
@@ -153,14 +151,26 @@ form {
         height: auto;
     }
 
-    #colF {
+    #colF, #allList, #listDetail, #orderFM {
         width: 100%;
-        margin-bottom: 1rem;
+        margin: 0;
+    }
+
+    #listF {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row.container {
+        flex-direction: column;
+    }
+
+    #textEffect h1 {
+        font-size: 1.5rem;
     }
 
     #allList {
-        padding-left: 0;
-        margin-left: 0;
+        padding: 0;
     }
 
     #listDetail {
