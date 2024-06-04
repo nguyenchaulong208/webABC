@@ -62,7 +62,7 @@ section {
  nav select{
     display: none;
  }
- @media (max-width: 960px) {
+ @media (max-width: 1080px) {
     nav ul     { display: none; }
     nav select { display: inline-block; }
    
