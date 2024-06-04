@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="">
         <!-- place navbar here -->
         <div class="container py-5">
             <div class="row container">
@@ -29,13 +29,10 @@
                         <h1>DRAGON FRUITS AND MORE...</h1>
                     </div>
 
-
+                    <br>
 
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Veniam et dolorum fugiat velit soluta similique,
-                        incidunt impedit unde reprehenderit minus iure id.
-                        Non ad facilis nulla laudantium itaque enim quod.
+                        Two people working hard to take care of a financial burden
                     </p>
                     <br>
                     <p class="">
@@ -53,19 +50,19 @@
                  
                     <div class="row" id="layOut">
                         <div class="col" id="menu">
-                           
+                            <h5 class="text-center">MENU</h5>
                             <hr>
                             <nav>
                                 <ul >
-                                    <h5">MENU</h5>
+                                   
                                     <li><a href="#">All</a></li>
                                     <li><a href="#">Best Seller</a></li>
                                     <li><a href="#">Fruits</a></li>
                                     <li><a href="#">Swallow's Nest</a></li>
                                 </ul>
                                 <select>
-                                    <option value="" selected="selected">MENU</option>
-                                    <option value="">All</option>
+                                    <option value="" selected="selected">All</option>
+                                    
                                     <option value="">Best Seller</option>
                                     <option value="">Fruits</option>
                                     <option value="">Swallow's Nest</option>
@@ -81,7 +78,12 @@
                             </div>
                             <h5>All</h5>
                             <hr>
-                            <div class="row" id="list">
+                            <div>
+                                <div id="view">
+                                    <!-- place products here -->
+                                </div>
+                            </div>
+                            <!-- <div class="row" id="list">
                                 <div class="col ">
                                     <img src="images/cherry.jpg" alt="">
                                 </div>
@@ -91,8 +93,8 @@
 
                                     <button class="btn btn-primary">Add to cart</button>
                                 </div>
-                            </div>
-                            <div class="row" id="list">
+                            </div> -->
+                            <!-- <div class="row" id="list">
                                 <div class="col">
                                     <img src="images/tao_core.jpg" alt="">
                                 </div>
@@ -112,8 +114,8 @@
                                     <p>Price: 125.000 VND</p>
 
                                     <button class="btn btn-primary">Add to cart</button>
-                                </div>
-                            </div>
+                                </div> 
+                            </div>-->
                             
                         </div>
                         <div class="col" id="cart">
@@ -168,6 +170,38 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c8e87b6f6b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js" integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="db/list.js"></script>
+    <!-- lay data tu db/list.js -->
+
+<script id="template" type="text/x-handlebars-template">
+    {{#each data}}
+    <div class="row" id="list">
+        <div class="col" >
+            <img src="{{imgPath}}" alt="">
+        </div>
+        <div class="col">
+            <h5>{{title}}</h5>
+            <p>Price: {{price}} VND</p>
+
+            <button class="btn btn-primary">Add to cart</button>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+    <script>
+        let jsonData = {
+            // goi ham getAll() trong file data.js de lay du lieu
+            data: getAll()
+        };
+        // in ra du lieu lay duoc tu file data.js ra console de kiem tra
+        // console.log(jsonData);
+        let source = document.querySelector("#template").innerHTML;
+        let template = Handlebars.compile(source);
+        document.querySelector("#view").innerHTML = template(jsonData);
+    </script>
 </body>
 
 </html>
