@@ -20,10 +20,10 @@
         <!-- place navbar here -->
         <div class="container py-5">
             <div class="row container">
-                <div class="col-6 text-center">
+                <div class="col text-center">
                     <img src="images/thumb.png" alt="">
                 </div>
-                <div class="col-6 ">
+                <div class="col">
 
                     <div id="textEffect">
                         <h1>DRAGON FRUITS AND MORE...</h1>
@@ -52,17 +52,28 @@
             <section>
                  
                     <div class="row" id="layOut">
-                        <div class="col-2 col-sm-12" id="menu">
-                            <h5>MENU</h5>
+                        <div class="col" id="menu">
+                           
                             <hr>
-                            <ul>
-                                <li><a href="#">All</a></li>
-                                <li><a href="#">Best Seller</a></li>
-                                <li><a href="#">Fruits</a></li>
-                                <li><a href="#">Swallow's Nest</a></li>
-                            </ul>
+                            <nav>
+                                <ul >
+                                    <h5">MENU</h5>
+                                    <li><a href="#">All</a></li>
+                                    <li><a href="#">Best Seller</a></li>
+                                    <li><a href="#">Fruits</a></li>
+                                    <li><a href="#">Swallow's Nest</a></li>
+                                </ul>
+                                <select>
+                                    <option value="" selected="selected">MENU</option>
+                                    <option value="">All</option>
+                                    <option value="">Best Seller</option>
+                                    <option value="">Fruits</option>
+                                    <option value="">Swallow's Nest</option>
+                                </select>
+                            </nav>
+                            
                         </div>
-                        <div class="col-8 col-sm-12" id="menuDetail">
+                        <div class="col-8" id="menuDetail">
                             <div class="search-container">
                                 <form action="" >
                                     <input type="text" placeholder="Search">
@@ -71,10 +82,10 @@
                             <h5>All</h5>
                             <hr>
                             <div class="row" id="list">
-                                <div class="col-3">
+                                <div class="col ">
                                     <img src="images/cherry.jpg" alt="">
                                 </div>
-                                <div class="col-9">
+                                <div class="col">
                                     <h5>Cherry (500gram)</h5>
                                     <p>Price: 190.000 VND</p>
 
@@ -82,10 +93,10 @@
                                 </div>
                             </div>
                             <div class="row" id="list">
-                                <div class="col-3">
+                                <div class="col">
                                     <img src="images/tao_core.jpg" alt="">
                                 </div>
-                                <div class="col-9">
+                                <div class="col">
                                     <h5>TÁO TÚI CORE NAM PHI NHẬP KHẨU (Túi 3kg)</h5>
                                     <p>Price: 125.000 VND</p>
 
@@ -93,10 +104,10 @@
                                 </div>
                             </div>
                             <div class="row" id="list">
-                                <div class="col-3">
+                                <div class="col" >
                                     <img src="images/tao_core.jpg" alt="">
                                 </div>
-                                <div class="col-9">
+                                <div class="col">
                                     <h5>TÁO TÚI CORE NAM PHI NHẬP KHẨU (Túi 3kg)</h5>
                                     <p>Price: 125.000 VND</p>
 
@@ -105,7 +116,7 @@
                             </div>
                             
                         </div>
-                        <div class="col-2 col-sm-12" id="cart">
+                        <div class="col" id="cart">
                             <h5>Your Cart</h5>
                             <hr>
                            <div id="orderList">

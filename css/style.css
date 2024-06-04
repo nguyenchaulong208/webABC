@@ -59,7 +59,17 @@ section {
     padding-bottom: 1rem;
 
 }
+ nav select{
+    display: none;
+ }
+ @media (max-width: 960px) {
+    nav ul     { display: none; }
+    nav select { display: inline-block; }
+   
+   
 
+    
+  }
 
 #textEffect {
     text-shadow: #FFFFFF 0 0 12px, #a9e942 0 0 25px, #a9e942 0 0 35px, #a9e942 0 0 50px;
@@ -75,6 +85,10 @@ section {
     /* Adjust as needed */
     text-align: center;
     height: fit-content;
+}
+#layOut h5 {
+    text-align: left;
+   
 }
 
 #layOut ul li {
