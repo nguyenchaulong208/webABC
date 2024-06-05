@@ -82,7 +82,7 @@ section {
 
 @media (max-width: 1080px) {
     #cart{
-        display: inline-block;
+        display: none;
         position: sticky;
         bottom: 0;
   
