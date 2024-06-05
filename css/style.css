@@ -186,3 +186,6 @@ align-items: center;
 background-color: #F2C2CF;
 border-color: #F2C2CF;
 }
+.col{
+    width: fit-content;
+}
