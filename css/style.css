@@ -149,7 +149,7 @@ section {
 }
 #list img{
 
-   width:auto;
+   width:fit-content;
     height: 100px;
     border-radius: 10%;
     image-rendering: crisp-edges;
@@ -186,6 +186,4 @@ align-items: center;
 background-color: #F2C2CF;
 border-color: #F2C2CF;
 }
-.col{
-    width: fit-content;
-}
+
