@@ -33,6 +33,7 @@ header img {
     height: auto;
     border-radius: 10%;
     image-rendering: crisp-edges;
+
 }
 
 main {
@@ -90,7 +91,7 @@ section {
 }
 
 #textEffect {
-    text-shadow: #FFFFFF 0 0 12px, #a9e942 0 0 25px, #a9e942 0 0 35px, #a9e942 0 0 50px;
+    text-shadow: #FFFFFF 0 0 12px, #D991A4 0 0 25px, #D991A4 0 0 35px, #D991A4 0 0 50px;
     font-weight: bold;
 }
 
@@ -179,4 +180,8 @@ align-items: center;
 #cart{
     background-color: white;
     padding: 1rem;
+}
+.btn-primary{
+background-color: #F2C2CF;
+border-color: #F2C2CF;
 }
