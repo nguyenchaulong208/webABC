@@ -144,7 +144,7 @@ section {
 #list{
     text-align: left;
     padding: 1rem;
-    width:100%;
+
 
 }
 #list img{
@@ -153,6 +153,7 @@ section {
     height: 100px;
     border-radius: 10%;
     image-rendering: crisp-edges;
+    text-align: center;
     
 }
 
