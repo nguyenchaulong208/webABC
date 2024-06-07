@@ -3,41 +3,32 @@
 
 <head>
     <title>Dragon Fruits and More...</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header class="">
-        <!-- place navbar here -->
+    <header>
         <div class="container py-5">
             <div class="row container">
                 <div class="col text-center">
                     <img src="images/thumb.png" alt="">
                 </div>
                 <div class="col">
-
                     <div id="textEffect">
                         <h1>DRAGON FRUITS AND MORE...</h1>
                     </div>
-
                     <br>
-
                     <p>
-                        Two people working hard to take care of a financial burden - a "cute" cat 🐱
+                        Two people working hard to take care of a financial burden
                     </p>
                     <br>
                     <p class="">
                         <i class="fa-solid fa-mobile-screen"></i> Hotline: 0326961297 <br>
-
                         <i class="fa-solid fa-location-dot"></i> Go Vap District, Ho Chi Minh City, Vietnam
                     </p>
                 </div>
@@ -47,103 +38,52 @@
     <main id="background">
         <div class="">
             <section>
-                 
-                    <div class="row" id="layOut">
-                        <div class="col" id="menu">
-                            <h5 class="text-center">MENU</h5>
-                            <hr>
-                            <nav>
-                                <ul >
-                                   
-                                    <li><a href="#">All</a></li>
-                                    <li><a href="#">Best Seller</a></li>
-                                    <li><a href="#">Fruits</a></li>
-                                    <li><a href="#">Swallow's Nest</a></li>
-                                </ul>
-                                <select>
-                                    <option value="" selected="selected">All</option>
-                                    
-                                    <option value="">Best Seller</option>
-                                    <option value="">Fruits</option>
-                                    <option value="">Swallow's Nest</option>
-                                </select>
-                            </nav>
-                            
+                <div class="row" id="layOut">
+                    <div class="col" id="menu">
+                        <h5 class="text-center">MENU</h5>
+                        <hr>
+                        <nav>
+                            <ul>
+                                <li><a href="#" onclick="getAll()">All</a></li>
+                                <li><a href="#">Best Seller</a></li>
+                                <li><a href="#">Fruits</a></li>
+                                <li><a href="#">Swallow's Nest</a></li>
+                            </ul>
+                            <select>
+                                <option value="" selected="selected">All</option>
+                                <option value="">Best Seller</option>
+                                <option value="">Fruits</option>
+                                <option value="">Swallow's Nest</option>
+                            </select>
+                        </nav>
+                    </div>
+                    <div class="col" id="menuDetail">
+                        <div class="search-container">
+                            <form action="">
+                                <input type="text" placeholder="Search">
+                            </form>
                         </div>
-                        <div class="col-8" id="menuDetail">
-                            <div class="search-container">
-                                <form action="" >
-                                    <input type="text" placeholder="Search">
-                                </form>
+                        <h5>All</h5>
+                        <hr>
+                        <div>
+                            <div id="view">
+                                <!-- place products here -->
                             </div>
-                            <h5>All</h5>
-                            <hr>
-                            <div>
-                                <div id="view">
-                                    <!-- place products here -->
-                                </div>
-                            </div>
-                            <!-- <div class="row" id="list">
-                                <div class="col ">
-                                    <img src="images/cherry.jpg" alt="">
-                                </div>
-                                <div class="col">
-                                    <h5>Cherry (500gram)</h5>
-                                    <p>Price: 190.000 VND</p>
-
-                                    <button class="btn btn-primary">Add to cart</button>
-                                </div>
-                            </div> -->
-                            <!-- <div class="row" id="list">
-                                <div class="col">
-                                    <img src="images/tao_core.jpg" alt="">
-                                </div>
-                                <div class="col">
-                                    <h5>TÁO TÚI CORE NAM PHI NHẬP KHẨU (Túi 3kg)</h5>
-                                    <p>Price: 125.000 VND</p>
-
-                                    <button class="btn btn-primary">Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="row" id="list">
-                                <div class="col" >
-                                    <img src="images/tao_core.jpg" alt="">
-                                </div>
-                                <div class="col">
-                                    <h5>TÁO TÚI CORE NAM PHI NHẬP KHẨU (Túi 3kg)</h5>
-                                    <p>Price: 125.000 VND</p>
-
-                                    <button class="btn btn-primary">Add to cart</button>
-                                </div> 
-                            </div>-->
-                            
-                        </div>
-                        <div class="col" id="cart">
-                            <h5>Your Cart</h5>
-                            <hr>
-                           <div id="orderList">
-                            <div class="row">
-                                <div class="col-8">
-                                    asdasdsa
-                                </div>
-                                <div class="col-4">
-                                    12
-                                </div>
-                            </div>
-                           </div>
-                           Total: 0 VND
-                           <br>
-                            <button class="btn btn-primary">Check out</button>
-
                         </div>
                     </div>
-                  
+                    <div class="col" id="cart">
+                        <h5>Your Cart</h5>
+                        <hr>
+                        <div id="orderList"></div>
+                        Total: <span id="totalPrice">0</span> VND
+                        <br>
+                        <button class="btn btn-primary">Check out</button>
+                    </div>
+                </div>
             </section>
-
         </div>
     </main>
     <footer>
-        <!-- place footer here -->
         <div class="row container py-5">
             <div class="col-6">
                 <h4>Về chúng tôi</h4>
@@ -160,47 +100,76 @@
             <div class="col-12 text-center">
                 <p>© 2021 Dragon Fruits. All Rights Reserved.</p>
             </div>
+        </div>
     </footer>
-    <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQ+O15P+16Ep7Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c8e87b6f6b.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js" integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"
+        integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="db/list.js"></script>
     <!-- lay data tu db/list.js -->
 
-<script id="template" type="text/x-handlebars-template">
-    {{#each data}}
-    <div class="row" id="list">
-        <div class="col" >
-            <img src="{{imgPath}}" alt="">
+    <script id="template" type="text/x-handlebars-template">
+        {{#each data}}
+        <div class="row" id="list">
+            <div class="col-sm-4">
+                <img src="{{imgPath}}" alt="">
+            </div>
+            <div class="col-sm-8">
+                <h5>{{title}}</h5>
+                <p>Price: {{price}} VND</p>
+                <button class="btn btn-primary" onclick="addToCart({{id}}, '{{title}}', {{price}})">Add to cart</button>
+            </div>
         </div>
-        <div class="col">
-            <h5>{{title}}</h5>
-            <p>Price: {{price}} VND</p>
-
-            <button class="btn btn-primary">Add to cart</button>
-        </div>
-    </div>
-    {{/each}}
-</script>
+        {{/each}}
+    </script>
 
     <script>
-        let jsonData = {
-            // goi ham getAll() trong file data.js de lay du lieu
-            data: getAll()
-        };
-        // in ra du lieu lay duoc tu file data.js ra console de kiem tra
-        // console.log(jsonData);
-        let source = document.querySelector("#template").innerHTML;
-        let template = Handlebars.compile(source);
-        document.querySelector("#view").innerHTML = template(jsonData);
+        const cart = [];
+
+        function addToCart(id, title, price) {
+            const item = cart.find(i => i.id === id);
+            if (item) {
+                item.quantity++;
+            } else {
+                cart.push({ id, title, price, quantity: 1 });
+            }
+            updateCart();
+        }
+
+        function updateCart() {
+            const orderList = document.getElementById('orderList');
+            const totalPriceElem = document.getElementById('totalPrice');
+            orderList.innerHTML = '';
+            let totalPrice = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                totalPrice += itemTotal;
+                const itemElem = document.createElement('div');
+                itemElem.className = 'row';
+                itemElem.innerHTML = `
+                    <div class="col-8">${item.title} x ${item.quantity}</div>
+                    <div class="col-4">${itemTotal.toFixed(2)} VND</div>
+                `;
+                orderList.appendChild(itemElem);
+            });
+
+            totalPriceElem.innerText = totalPrice.toFixed(2);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const jsonData = { data: getAll() };
+            const source = document.querySelector("#template").innerHTML;
+            const template = Handlebars.compile(source);
+            document.querySelector("#view").innerHTML = template(jsonData);
+        });
     </script>
 </body>
 
