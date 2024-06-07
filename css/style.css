@@ -84,9 +84,10 @@ section {
 @media (max-width: 1080px) {
     #cart{
         display: inline-block;
-
         position: sticky;
         bottom: 0;
+        flex: content;
+        
 
     }
 }

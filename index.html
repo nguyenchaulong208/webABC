@@ -31,6 +31,9 @@
                         <i class="fa-solid fa-mobile-screen"></i> Hotline: 0326961297 <br>
                         <i class="fa-solid fa-location-dot"></i> Go Vap District, Ho Chi Minh City, Vietnam
                     </p>
+                    <div>
+                        <a class="btn btn-primary" href="https://www.facebook.com/LamThanh.Gkn">Facebook: Thanh Thanh</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -166,19 +169,28 @@
                 itemElem.innerHTML = `
                     <div class="col">${item.title} x ${item.quantity}</div>
                     <div class="col">${formatCurrency(itemTotal)}</div>
+                    <div class="col"><button onclick="deleteItem(${item.id})">Delete</button></div>
                 `;
                 orderList.appendChild(itemElem);
             });
     
             totalPriceElem.innerText = formatCurrency(totalPrice);
         }
-    
+        function deleteItem(id) {
+    const index = cart.findIndex(item => item.id === id);
+    if (index !== -1) {
+        cart.splice(index, 1);
+        updateCart();
+    }
+}
+        
         document.addEventListener('DOMContentLoaded', () => {
             const jsonData = { data: getAll() };
             const source = document.querySelector("#template").innerHTML;
             const template = Handlebars.compile(source);
             document.querySelector("#view").innerHTML = template(jsonData);
         });
+        
     </script>
     
     
