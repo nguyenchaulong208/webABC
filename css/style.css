@@ -33,6 +33,7 @@ header img {
     height: auto;
     border-radius: 10%;
     image-rendering: crisp-edges;
+
 }
 
 main {
@@ -82,7 +83,7 @@ section {
 
 @media (max-width: 1080px) {
     #cart{
-        display: inline-block;
+        display: none;
         position: sticky;
         bottom: 0;
   
@@ -90,7 +91,7 @@ section {
 }
 
 #textEffect {
-    text-shadow: #FFFFFF 0 0 12px, #a9e942 0 0 25px, #a9e942 0 0 35px, #a9e942 0 0 50px;
+    text-shadow: #FFFFFF 0 0 12px, #D991A4 0 0 25px, #D991A4 0 0 35px, #D991A4 0 0 50px;
     font-weight: bold;
 }
 
@@ -125,7 +126,7 @@ section {
 
     margin-left: 2rem;
     margin-right: 2rem;
-    width: 100%;
+    width: fit-content;
     background-color: white;
 
 
@@ -148,11 +149,12 @@ section {
 }
 #list img{
 
-    width: fit-content;
+   width:fit-content;
     height: 100px;
     border-radius: 10%;
     image-rendering: crisp-edges;
-    
+    text-align: center;
+    padding: 0;
 }
 
 #list form{
@@ -180,3 +182,8 @@ align-items: center;
     background-color: white;
     padding: 1rem;
 }
+.btn-primary{
+background-color: #F2C2CF;
+border-color: #F2C2CF;
+}
+
