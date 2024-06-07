@@ -75,7 +75,7 @@
                         <h5>Your Cart</h5>
                         <hr>
                         <div id="orderList"></div>
-                        Total: <span id="totalPrice">0</span> VND
+                        Total: <span id="totalPrice">0</span>
                         <br>
                         <button class="btn btn-primary">Check out</button>
                     </div>
@@ -123,7 +123,7 @@
             </div>
             <div class="col-sm-8">
                 <h5>{{title}}</h5>
-                <p>Price: {{price}} VND</p>
+                <p>Price: {{ formatCurrency price}}</p>
                 <button class="btn btn-primary" onclick="addToCart({{id}}, '{{title}}', {{price}})">Add to cart</button>
             </div>
         </div>
@@ -131,8 +131,17 @@
     </script>
 
     <script>
+        // Define the formatCurrency function
+        Handlebars.registerHelper('formatCurrency', function(amount) {
+    // Sử dụng hàm Intl.NumberFormat để định dạng số tiền
+    return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+});
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+        }
+    
         const cart = [];
-
+    
         function addToCart(id, title, price) {
             const item = cart.find(i => i.id === id);
             if (item) {
@@ -142,28 +151,28 @@
             }
             updateCart();
         }
-
+    
         function updateCart() {
             const orderList = document.getElementById('orderList');
             const totalPriceElem = document.getElementById('totalPrice');
             orderList.innerHTML = '';
             let totalPrice = 0;
-
+    
             cart.forEach(item => {
                 const itemTotal = item.price * item.quantity;
                 totalPrice += itemTotal;
                 const itemElem = document.createElement('div');
                 itemElem.className = 'row';
                 itemElem.innerHTML = `
-                    <div class="col-8">${item.title} x ${item.quantity}</div>
-                    <div class="col-4">${itemTotal.toFixed(2)} VND</div>
+                    <div class="col">${item.title} x ${item.quantity}</div>
+                    <div class="col">${formatCurrency(itemTotal)}</div>
                 `;
                 orderList.appendChild(itemElem);
             });
-
-            totalPriceElem.innerText = totalPrice.toFixed(2);
+    
+            totalPriceElem.innerText = formatCurrency(totalPrice);
         }
-
+    
         document.addEventListener('DOMContentLoaded', () => {
             const jsonData = { data: getAll() };
             const source = document.querySelector("#template").innerHTML;
@@ -171,6 +180,10 @@
             document.querySelector("#view").innerHTML = template(jsonData);
         });
     </script>
+    
+    
+    
+</script>
 </body>
 
 </html>

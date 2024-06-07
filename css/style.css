@@ -69,16 +69,16 @@ section {
     #menu{
         position: sticky;
         top: 0;
-        
+
     }
     #layOut>div {
         margin-left: 2rem;
         margin-right: 2rem;
-  
-    }
-   
 
-    
+    }
+
+
+
 }
 
 @media (max-width: 1080px) {
@@ -86,7 +86,7 @@ section {
         display: none;
         position: sticky;
         bottom: 0;
-  
+
     }
 }
 
@@ -97,15 +97,7 @@ section {
 
 
 
-#layOut>div {
-    border: 1px solid black;
-    padding: 10px;
-   
-    /* Adjust as needed */
-    text-align: center;
-    height: fit-content;
-    gap: 1rem;
-}
+
 
 
 #layOut ul li {
@@ -117,10 +109,32 @@ section {
 #layOut ul li a {
     text-decoration: none;
     color: black;
-    
+
 
 }
 
+#menu{
+    
+        border: 1px solid black;
+        padding: 10px;
+        width: 100px;
+        /* Adjust as needed */
+        text-align: center;
+        height: fit-content;
+        gap: 1rem;
+    
+}
+#cart{
+    
+    border: 1px solid black;
+    padding: 10px;
+    width: 100%;
+    /* Adjust as needed */
+    text-align: center;
+    height: fit-content;
+    gap: 1rem;
+
+}
 
 
 #menuDetail {
@@ -132,14 +146,14 @@ section {
 
 
 }
-  
+
 .search-container form {
     width: 100%;
     /* Adjust as needed */
     display: flex;
     justify-content: center;
     ;
-    
+
 }
 
 #list{
@@ -150,8 +164,8 @@ section {
 }
 #list img{
 
-   width:fit-content;
-    height: 100px;
+   width:80px;
+    height: 70px;
     border-radius: 10%;
     image-rendering: crisp-edges;
 
@@ -166,7 +180,7 @@ align-items: center;
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
-    
+
 }
 
 
@@ -182,9 +196,19 @@ align-items: center;
 #cart{
     background-color: white;
     padding: 1rem;
+    width: 50px;
 }
 .btn-primary{
 background-color: #F2C2CF;
 border-color: #F2C2CF;
 }
 
+.btn-primary:hover{
+    background-color: #F2C2CF;
+    
+}
+
+.btn-primary:current{
+    background-color: #F2C2CF;
+    
+}
