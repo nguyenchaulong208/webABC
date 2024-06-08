@@ -35,7 +35,7 @@
                         <i class="fa-solid fa-location-dot"></i> Go Vap District, Ho Chi Minh City, Vietnam
                     </p>
                     <div>
-                        <a class="btn btn-primary" href="https://www.facebook.com/LamThanh.Gkn">Facebook: Thanh Thanh</a>
+                        <a class="btn btn-primary" href="http://zaloapp.com/qr/p/dp3mmq274p2x">Zalo: Lam Thanh</a>
                     </div>
                 </div>
             </div>
@@ -171,9 +171,9 @@
                 itemElem.className = 'row';
                 itemElem.innerHTML = `
                    <div class="row">
-                     <div class="col-4">${item.title} x ${item.quantity}</div>
-                    <div class="col-4">${formatCurrency(itemTotal)}</div>
-                    <div class="col-4"><button onclick="deleteItem(${item.id})">Delete</button></div>
+                     <div class="col-6">${item.title} x ${item.quantity}</div>
+                    <div class="col-3">${formatCurrency(itemTotal)}</div>
+                    <div class="col-3"><button onclick="deleteItem(${item.id})">Delete</button></div>
                     </div>
                 `;
                 orderList.appendChild(itemElem);
