@@ -9,6 +9,9 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -24,7 +27,7 @@
                     </div>
                     <br>
                     <p>
-                        Two people working hard to take care of a financial burden
+                        Two people working hard to take care of a financial burden - a "cute" cat
                     </p>
                     <br>
                     <p class="">
@@ -167,9 +170,11 @@
                 const itemElem = document.createElement('div');
                 itemElem.className = 'row';
                 itemElem.innerHTML = `
-                    <div class="col">${item.title} x ${item.quantity}</div>
-                    <div class="col">${formatCurrency(itemTotal)}</div>
-                    <div class="col"><button onclick="deleteItem(${item.id})">Delete</button></div>
+                   <div class="row">
+                     <div class="col-4">${item.title} x ${item.quantity}</div>
+                    <div class="col-4">${formatCurrency(itemTotal)}</div>
+                    <div class="col-4"><button onclick="deleteItem(${item.id})">Delete</button></div>
+                    </div>
                 `;
                 orderList.appendChild(itemElem);
             });

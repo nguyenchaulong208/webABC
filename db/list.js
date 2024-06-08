@@ -18,7 +18,7 @@ const list = [{
 },
 {
     "id": 4,
-    "title": "NHO MẪU ĐƠN SHINE MUSCAT THÙNG HỒNG - 1 THÙNG",
+    "title": "NHO MẪU ĐƠN SHINE MUSCAT - THÙNG 3 CHÙM - 1.5KG",
     "price": "300000",
     "imgPath":"/images/shine_muscat.jpg"
 }
@@ -26,7 +26,7 @@ const list = [{
 {
     "id": 5,
     "title": "KIWI VÀNG ZESPRI NEWZELAND- HỘP 1KG",
-    "price":  "155000",
+    "price":  "160000",
     "imgPath":"/images/zespri_newzeland.jpg"
 }
 ,
@@ -39,16 +39,22 @@ const list = [{
 ,
 {
     "id": 7,
-    "title": "DƯA QUEEN",
-    "price":  "115000",
-    "imgPath":"/images/queen.jpg"
+    "title": "NA THÁI - SET 2KG",
+    "price":  "140000",
+    "imgPath":"/images/na_thai.jpg"
 }
 ,
 {
     "id": 8,
-    "title": "[ĐẶT TRƯỚC] YẾN SÀO NGUYÊN TỔ - BÌNH THUẬN - NHÀ NUÔI - 100GRAM",
+    "title": "YẾN SÀO BÌNH THUẬN - NHÀ NUÔI - 100GRAM",
     "price":  "3000000",
     "imgPath":"/images/nest.jpg"
+},
+{
+    "id": 9,
+    "title": "NHO ĐỎ KHÔNG HẠT CRIMSON ÚC - 1KG",
+    "price":  "150000",
+    "imgPath":"/images/nho_do_uc.jpg"
 }
 ]
 // chi so trang bat dau tu 1
