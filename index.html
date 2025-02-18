@@ -10,197 +10,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="container py-5">
-            <div class="row container">
-                <div class="col text-center">
-                    <img src="images/thumb.png" alt="">
-                </div>
-                <div class="col">
-                    <div id="textEffect">
-                        <h1>DRAGON FRUITS AND MORE...</h1>
-                    </div>
-                    <br>
-                    <p>
-                        Two people working hard to take care of a financial burden - a "cute" cat
-                    </p>
-                    <br>
-                    <p class="">
-                        <i class="fa-solid fa-mobile-screen"></i> Hotline: 0326961297 <br>
-                        <i class="fa-solid fa-location-dot"></i> Go Vap District, Ho Chi Minh City, Vietnam
-                    </p>
-                    <div>
-                        <a class="btn btn-primary" href="http://zaloapp.com/qr/p/dp3mmq274p2x">Zalo: Lam Thanh</a>
-                    </div>
-                </div>
+        <!-- navbar -->
+
+        <div class="container"  >
+            <div>
+                <h1>Dragon Fruits and More...</h1>
+    
+            </div>
+            <div>
+                <label>Total:</label>
+                <button>Buy</button>
+                <input type="text" placeholder="Search">
+                <button>Search</button>
+                
             </div>
         </div>
+        
+
     </header>
-    <main id="background">
-        <div class="">
-            <section>
-                <div class="row" id="layOut">
-                    <div class="col" id="menu">
-                        <h5 class="text-center">MENU</h5>
-                        <hr>
-                        <nav>
-                            <ul>
-                                <li><a href="#" onclick="getAll()">All</a></li>
-                                <li><a href="#">Best Seller</a></li>
-                                <li><a href="#">Fruits</a></li>
-                                <li><a href="#">Swallow's Nest</a></li>
-                            </ul>
-                            <select>
-                                <option value="" selected="selected">All</option>
-                                <option value="">Best Seller</option>
-                                <option value="">Fruits</option>
-                                <option value="">Swallow's Nest</option>
-                            </select>
-                        </nav>
-                    </div>
-                    <div class="col" id="menuDetail">
-                        <div class="search-container">
-                            <form action="">
-                                <input type="text" placeholder="Search">
-                            </form>
-                        </div>
-                        <h5>All</h5>
-                        <hr>
-                        <div>
-                            <div id="view">
-                                <!-- place products here -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col" id="cart">
-                        <h5>Your Cart</h5>
-                        <hr>
-                        <div id="orderList"></div>
-                        Total: <span id="totalPrice">0</span>
-                        <br>
-                        <button class="btn btn-primary">Check out</button>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-    <footer>
-        <div class="row container py-5">
-            <div class="col-6">
-                <h4>Về chúng tôi</h4>
-                <a href="#">Giới thiệu</a><br>
-                <a href="#">Qui định & hình thức thanh toán</a><br>
-                <a href="#">Chính sách bảo mật thông tin</a><br>
-            </div>
-            <div class="col-6">
-                <h4>Hỗ trợ</h4>
-                <a href="#">Điều kiện giao dịch</a><br>
-                <a href="#">Vận chuyển và giao dịch</a><br>
-            </div>
-            <hr>
-            <div class="col-12 text-center">
-                <p>© 2021 Dragon Fruits. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQ+O15P+16Ep7Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/c8e87b6f6b.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"
-        integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="db/list.js"></script>
-    <!-- lay data tu db/list.js -->
-
-    <script id="template" type="text/x-handlebars-template">
-        {{#each data}}
-        <div class="row" id="list">
-            <div class="col-sm-4">
-                <img src="{{imgPath}}" alt="">
-            </div>
-            <div class="col-sm-8">
-                <h5>{{title}}</h5>
-                <p>Price: {{ formatCurrency price}}</p>
-                <button class="btn btn-primary" onclick="addToCart({{id}}, '{{title}}', {{price}})">Add to cart</button>
-            </div>
-        </div>
-        {{/each}}
-    </script>
-
-    <script>
-        // Define the formatCurrency function
-        Handlebars.registerHelper('formatCurrency', function(amount) {
-    // Sử dụng hàm Intl.NumberFormat để định dạng số tiền
-    return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
-});
-        function formatCurrency(amount) {
-            return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
-        }
-    
-        const cart = [];
-    
-        function addToCart(id, title, price) {
-            const item = cart.find(i => i.id === id);
-            if (item) {
-                item.quantity++;
-            } else {
-                cart.push({ id, title, price, quantity: 1 });
-            }
-            updateCart();
-        }
-    
-        function updateCart() {
-            const orderList = document.getElementById('orderList');
-            const totalPriceElem = document.getElementById('totalPrice');
-            orderList.innerHTML = '';
-            let totalPrice = 0;
-    
-            cart.forEach(item => {
-                const itemTotal = item.price * item.quantity;
-                totalPrice += itemTotal;
-                const itemElem = document.createElement('div');
-                itemElem.className = 'row';
-                itemElem.innerHTML = `
-                   <div class="row">
-                     <div class="col-6">${item.title} x ${item.quantity}</div>
-                    <div class="col-3">${formatCurrency(itemTotal)}</div>
-                    <div class="col-3"><button onclick="deleteItem(${item.id})">Delete</button></div>
-                    </div>
-                `;
-                orderList.appendChild(itemElem);
-            });
-    
-            totalPriceElem.innerText = formatCurrency(totalPrice);
-        }
-        function deleteItem(id) {
-    const index = cart.findIndex(item => item.id === id);
-    if (index !== -1) {
-        cart.splice(index, 1);
-        updateCart();
-    }
-}
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            const jsonData = { data: getAll() };
-            const source = document.querySelector("#template").innerHTML;
-            const template = Handlebars.compile(source);
-            document.querySelector("#view").innerHTML = template(jsonData);
-        });
-        
-    </script>
-    
-    
-    
-</script>
 </body>
 
 </html>
